@@ -1,0 +1,28 @@
+name: Rust
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: aptkkk
+      run: echo '[target.aarch64-unknown-linux-gnu]\nlinker = "aarch64-linux-gnu-gcc"\nar = "aarch64-linux-gnu-gcc-ar"' >> ~/.cargo/config    
+    - name: aptkkk
+      run: sudo apt install gcc make gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu
+      
+    - name: ms
+      run: relay-rust
+    - name: Build
+      run: cargo build --release --target=aarch64-unknown-linux-gnu --verbose      
+ 
