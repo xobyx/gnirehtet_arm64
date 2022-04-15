@@ -21,8 +21,7 @@ jobs:
     - name: aptkkk
       run: sudo apt install gcc make gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu
       
-    - name: ms
-      run: cd /home/runner/work/gnirehtet_arm64/gnirehtet_arm64/relay-rust
+    
     - name: Build
-      run: cargo build --release --target=aarch64-unknown-linux-gnu --verbose      
+      run: cd /home/runner/work/gnirehtet_arm64/gnirehtet_arm64/relay-rust && cargo build --release --target=aarch64-unknown-linux-gnu --verbose      
  
