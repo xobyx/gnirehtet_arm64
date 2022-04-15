@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: aptkkk
-      run: echo '[target.aarch64-unknown-linux-gnu]\nlinker = "aarch64-linux-gnu-gcc"\nar = "aarch64-linux-gnu-gcc-ar"' >> ~/.cargo/config    
+      run: echo '[target.aarch64-unknown-linux-gnu]' >> ~/.cargo/config && echo 'linker = "aarch64-linux-gnu-gcc"' >> ~/.cargo/config && echo 'ar = "aarch64-linux-gnu-gcc-ar"' >> ~/.cargo/config    
     - name: aptkkk
       run: sudo apt install gcc make gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu
       
