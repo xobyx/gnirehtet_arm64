@@ -20,7 +20,8 @@ jobs:
       run: echo '[target.aarch64-unknown-linux-gnu]' >> ~/.cargo/config && echo 'linker = "aarch64-linux-gnu-gcc"' >> ~/.cargo/config && echo 'ar = "aarch64-linux-gnu-gcc-ar"' >> ~/.cargo/config    
     - name: aptkkk
       run: sudo apt install gcc make gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu
-      
+    - name: xxx
+      run: rustup target add aarch64-unknown-linux-gnu
     
     - name: Build
       run: cd /home/runner/work/gnirehtet_arm64/gnirehtet_arm64/relay-rust && cargo build --release --target=aarch64-unknown-linux-gnu --verbose      
