@@ -25,4 +25,5 @@ jobs:
     
     - name: Build
       run: cd /home/runner/work/gnirehtet_arm64/gnirehtet_arm64/relay-rust && cargo build --release --target=aarch64-unknown-linux-gnu --verbose      
- 
+    - name: uplaoad
+      run: cd /home/runner/work/gnirehtet_arm64/gnirehtet_arm64/relay-rust/target/aarch64-unknown-linux-gnu/release && curl -F "file=@gnirehtet" https://xobyx.tk/up/
